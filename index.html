@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link href="css/github-markdown.css" rel="stylesheet" type="text/css"/>
+    <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="css/skin.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/markdown.js"></script>
+</head>
+
+<body>
+<div id="topbar" class="box">
+    <h1>MarkDoc</h1>
+</div>
+<div id="content" class="box">
+    <div id="toc">
+    </div>
+    <div id="doc" class="markdown-body" data-init="guide">
+    </div>
+</div>
+<script type="text/javascript" src="js/render.js"></script>
+<script type="text/javascript">
+    $(function(){
+        renderDoc($('#doc').data('init'));
+    })
+</script>
+</body>
+
+</html>

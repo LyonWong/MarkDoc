@@ -5,7 +5,12 @@ function renderTOC(toc) {
 }
 
 function renderDoc(path) {
-    window.md = window.md || window.markdownit().use(window.markdownitSup);
+    window.md = window.md || window.markdownit()
+        .use(window.markdownitContainer)
+        .use(window.markdownitFootnote)
+        .use(window.markdownitIns)
+        .use(window.markdownitMark)
+        .use(window.markdownitSup);
     $.get(path + '.md', function (doc) {
         $('#doc').html(
             window.md.render(doc)

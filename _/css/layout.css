@@ -1,17 +1,16 @@
 a {
 	text-decoration: none;
-	color: #4884b8;
     width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
     display: block;
 }
+
 .box {
     display: flex;
 }
 ul.tier {
-	-webkit-padding-start: 5px;
+	-webkit-padding-start: 0;
     -webkit-margin-start: 10px;
-    border-left: 1px solid #ddd;
 }
 .tier li {
 	list-style: none;
@@ -21,20 +20,13 @@ ul.tier {
     height: 60px;
     align-items: center;
     padding: 10px;
-    border-bottom: 	1px solid #ddd;
 }
 #content {
     height: 100%;
-
 }
-
-
-#toc {
-	padding: 10px;
+#toc {	
     width: 200px;    
-    border-right: 	2px solid #ddd;
 }
-
 #doc {
 	padding: 10px;
 }

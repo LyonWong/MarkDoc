@@ -1,7 +1,18 @@
-#topbar {
-	background: #f6f8fa;
+a {
+	color: #4884b8;
+}
+ul.tier {
+	border-left: 1px solid #c8e1ff;
+}
+.tier .active {
+	background: #f1f8ff;
 }
 
-.tier .active {
-	background: #e8f1fb;
+#topbar {
+	background: #f1f8ff;
+	border-bottom: 1px solid #c8e1ff;
 }
+#toc {
+	border-right: 1px solid #c8e1ff;
+}
+

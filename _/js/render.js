@@ -46,6 +46,7 @@ $('#toc').on('click', '.link', function () {
     if (path) {
         $('.link').removeClass('active');
         $(this).addClass('active');
+        location.hash = path;
         renderDoc(path)
     }
 });

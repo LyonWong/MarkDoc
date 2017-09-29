@@ -16,13 +16,13 @@
 <div id="content" class="box">
     <div id="toc">
     </div>
-    <div id="doc" class="markdown-body" data-init="guide">
+    <div id="doc" class="markdown-body" data-init="README">
     </div>
 </div>
 <script type="text/javascript" src="_/js/render.js"></script>
 <script type="text/javascript">
     $(function(){
-        renderDoc($('#doc').data('init'));
+        renderDoc(location.hash.slice(1) || $('#doc').data('init'));
     })
 </script>
 </body>

@@ -21,9 +21,23 @@
 </div>
 <script type="text/javascript" src="_/js/render.js"></script>
 <script type="text/javascript">
-    $(function(){
+    $(function () {
+        $.get('TOC.conf', function (toc) {
+            renderTOC(
+                JSON.parse(toc)
+            )
+        });
         renderDoc(location.hash.slice(1) || $('#doc').data('init'));
-    })
+    });
+    $('#toc').on('click', '.link', function () {
+        var path = $(this).data('path');
+        if (path) {
+            $('.link').removeClass('active');
+            $(this).addClass('active');
+            location.hash = path;
+            renderDoc(path)
+        }
+    });
 </script>
 </body>
 

@@ -37,21 +37,3 @@ function parseList(conf, tier) {
     html += "</ul>";
     return html;
 }
-
-
-$(function () {
-    $.get('TOC.conf', function (toc) {
-        renderTOC(
-            JSON.parse(toc)
-        )
-    })
-});
-$('#toc').on('click', '.link', function () {
-    var path = $(this).data('path');
-    if (path) {
-        $('.link').removeClass('active');
-        $(this).addClass('active');
-        location.hash = path;
-        renderDoc(path)
-    }
-});
